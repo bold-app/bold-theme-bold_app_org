@@ -1,0 +1,8 @@
+en:
+  themes:
+    bold_app_org:
+      homepage:
+        try: "Try it out!"
+      layout:
+        published_with: Published with
+

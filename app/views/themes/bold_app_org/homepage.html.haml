@@ -1,0 +1,19 @@
+
+%section.row.top
+  .col-xs-12.col-sm-10.col-sm-offset-1
+
+    .jumbotron
+      %h1= page['heading']
+      %p= page['description']
+
+    = link_to t('.try'), '#', class: 'btn btn-lg btn-default'
+
+%section.row
+  .col-xs-12.col-sm-10.col-sm-offset-1.col-md-8.col-md-offset-2
+
+    %section
+      = page.body_html
+
+
+%a{href:'https://github.com/bold-app'}
+  = image_tag 'bold_app_org/forkme_right_red_aa0000.png', class: 'forkme'

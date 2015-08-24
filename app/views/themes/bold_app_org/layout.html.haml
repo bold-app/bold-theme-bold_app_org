@@ -1,0 +1,40 @@
+!!!
+%html{itemscope: true, itemtype: 'http://schema.org/WebPage'}
+  %head
+    %meta{:charset => "utf-8"}/
+    %meta{:content => "IE=edge", "http-equiv" => "X-UA-Compatible"}/
+    %meta{name: "HandheldFriendly", content: "True"}
+    %meta{:content => "width=device-width, initial-scale=1", :name => "viewport"}/
+    %title Bold. More than just blogging.
+    = stylesheet_link_tag 'bold_app_org', media: 'all'
+    = bold_meta
+    = yield :html_head
+
+  %body
+    = bold_header
+
+    %nav.navbar.navbar-default
+      .container
+        .navbar-header
+          %a.navbar-brand{href:'/'}
+            = site.logo_tag
+
+    .container{class: content.css_class}
+      = yield
+
+    %footer
+      .container
+        .row
+          .col-xs-12
+            %p.small.pull-right
+              = bold_logo text: t('.published_with'), html: { title: 'How meta.' }
+
+    #back-to-top
+      %a
+        %i.fa.fa-chevron-up
+
+    = bold_footer
+    = javascript_include_tag 'bold_app_org'
+
+
+
