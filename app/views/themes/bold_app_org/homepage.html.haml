@@ -1,7 +1,6 @@
 
 %section.row.top
-  .col-xs-12.col-sm-10.col-sm-offset-1
-
+  .col-xs-12.col-md-10.col-md-offset-1
     .jumbotron
       %h1= page['heading']
       %p= page['description']
@@ -10,9 +9,7 @@
 
 %section.row
   .col-xs-12.col-sm-10.col-sm-offset-1.col-md-8.col-md-offset-2
-
-    %section
-      = page.body_html
+    = page.body_html
 
 
 %a{href:'https://github.com/bold-app'}
