@@ -1,4 +1,4 @@
-The bold-app.org Bold theme
+The bold-app.org Bold theme [![Build Status](https://travis-ci.org/bold-app/bold-theme-bold_app_org.svg?branch=master)](https://travis-ci.org/bold-app/bold-theme-bold_app_org)
 ===========================
 
 
