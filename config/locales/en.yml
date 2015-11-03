@@ -3,6 +3,7 @@ en:
     bold_app_org:
       homepage:
         try: "Try it out!"
+        learn_more: Learn More
       layout:
         published_with: Published with
 

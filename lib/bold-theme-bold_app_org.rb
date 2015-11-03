@@ -1,3 +1,5 @@
+require 'font-awesome-rails'
+
 module Bold
   module Themes
     module BoldAppOrg

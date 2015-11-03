@@ -1,7 +1,10 @@
 @import "bootstrap-sprockets";
-@import "bold/bootstrap_customized_variables";
+// @import "bold/bootstrap_customized_variables";
 @import 'bootstrap';
+
+@import 'font-awesome';
 
 @import 'bold/fonts';
 
-@import 'bold_app_org/bold_app_org';
+@import 'bold_app_org/grayscale';
+@import 'bold_app_org/site';

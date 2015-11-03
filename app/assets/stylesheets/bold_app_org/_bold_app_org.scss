@@ -12,7 +12,10 @@ nav.navbar {
 }
 
 img.forkme {
-  position: absolute; top: 0; right: 0; border: 0;
+  position: absolute;
+  top: 0;
+  right: 0;
+  border: 0;
 }
 
 .container img.bold_app_org_content_full {
@@ -24,7 +27,7 @@ img.forkme {
 .homepage-template {
 
   h1 {
-    margin: 0 0 30px 0;
+    margin: 10px 0 30px 0;
     padding-bottom: 9px;
     border-bottom: 1px solid #eee;
   }
@@ -40,7 +43,7 @@ img.forkme {
     margin-top: 30px;
   }
 
-  section.top {
+  header {
     height: 100vh;
     text-align: center;
 
@@ -54,6 +57,28 @@ img.forkme {
       span {
         display: block;
       }
+    }
+
+    a#learnmore {
+      position: absolute;
+      left: 50%;
+      margin-left: -8em;
+      width: 16em;
+      bottom: 0;
+      height: 8em;
+      color: #333;
+      text-decoration: none;
+      text-transform: uppercase;
+    }
+    a#learnmore::after {
+      display: block;
+      margin-top: 10px;
+      content: '';
+      background: asset-url("bold_app_org/down.svg");
+      background-position: center center;
+      background-repeat: no-repeat;
+      background-size: contain;
+      height: 1.5em;
     }
   }
 

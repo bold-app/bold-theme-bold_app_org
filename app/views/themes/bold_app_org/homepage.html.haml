@@ -1,16 +1,27 @@
 
-%section.row.top
-  .col-xs-12.col-md-10.col-md-offset-1
-    .jumbotron
-      %h1= page['heading']
-      %p= page['description']
+%header.intro
+  .intro-body
+    .container
+      .row
+        .col-md-8.col-md-offset-2
+          %h1.brand-heading= page['heading']
+          %p.intro-text= page['description']
 
-    -#= link_to t('.try'), '#', class: 'btn btn-lg btn-default'
-
-%section.row
-  .col-xs-12.col-sm-10.col-sm-offset-1.col-md-8.col-md-offset-2
-    = page.body_html
+          %a.btn.btn-circle.page-scroll{href:'#features'}
+            %i.fa.fa-angle-double-down.animated
 
 
-%a{href:'https://github.com/bold-app'}
-  = image_tag 'bold_app_org/forkme_right_red_aa0000.png', class: 'forkme'
+%section#features.container.content-section
+  .row
+    .col-lg-8.col-lg-offset-2
+      = page.body_html
+
+%section#download.container.content-section.text-center
+  .row
+    .col-lg-8.col-lg-offset-2
+      %h1 Download
+      %p
+        Bold is under active development, no formal releases have been made
+        yet. You can always get the latest code on GitHub.
+      %a.btn.btn-default.btn-lg{href:'https://github.com/bold-app/'}
+        Bold on GitHub
