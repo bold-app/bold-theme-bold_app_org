@@ -17,8 +17,7 @@ module Bold
             name 'bold-app.org'
 
             template :homepage, fields: %w(heading description)
-
-            template :default, fields: %w(cover_image)
+            template :default
 
             # Declare the main stylesheet and Javascript files of the theme.
             #
