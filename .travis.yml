@@ -10,7 +10,6 @@ env:
   - APP_VERSION=master
 
 install:
-  - export PLUGIN=bold-theme-bold_app_org
   - psql -c 'create database travis_ci_test;' -U postgres
 
 script:

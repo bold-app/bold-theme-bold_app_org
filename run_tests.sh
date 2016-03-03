@@ -11,7 +11,6 @@ if [ "${PLUGIN}x" = "x" ]; then
 fi
 export PLUGIN
 
-
 if [ "${REPO_URL}x" = "x" ]; then
   REPO_URL="https://github.com/bold-app/bold.git"
 fi
@@ -26,8 +25,13 @@ if [ ! -d $DUMMY_APP ]; then
   echo "cloning ${REPO_URL}..."
   git clone --depth 50 --branch=${APP_VERSION} ${REPO_URL} ${DUMMY_APP}
   cp "${DUMMY_APP}/test/support/database.travis.yml" "${DUMMY_APP}/config/database.yml"
+  # make sure the plugin is not already mentioned in the master Gemfile
+  grep -v $PLUGIN "${DUMMY_APP}/Gemfile" > Gemfile.new
+  mv Gemfile.new "${DUMMY_APP}/Gemfile"
+  # and add the checked out path to Gemfile.local
   echo "gem '${PLUGIN}', path: '${VENDOR_DIR}'" > "${DUMMY_APP}/Gemfile.local"
 fi
+
 
 mkdir -p $GEMS
 ln -sf $PWD $VENDOR_DIR
