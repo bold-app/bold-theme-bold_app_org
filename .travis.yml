@@ -10,7 +10,6 @@ env:
   - APP_VERSION=master
 
 install:
-  - psql -c 'create database travis_ci_test;' -U postgres
 
 script:
   - ./run_tests.sh
