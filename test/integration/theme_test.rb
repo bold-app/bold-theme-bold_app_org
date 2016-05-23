@@ -7,7 +7,7 @@ class ThemeTest < ThemeIntegrationTest
   end
 
   test 'should have special pages' do
-    check_special_pages except: %w(archive_page author_page tag_page category_page)
+    check_special_pages except: %w(archive_page author_page tag_page category_page search_page)
   end
 
   test 'should show homepage' do
