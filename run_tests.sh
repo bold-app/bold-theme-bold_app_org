@@ -28,8 +28,6 @@ if [ ! -d $DUMMY_APP ]; then
   # make sure the plugin is not already mentioned in the master Gemfile
   grep -v $PLUGIN "${DUMMY_APP}/Gemfile" > Gemfile.new
   mv Gemfile.new "${DUMMY_APP}/Gemfile"
-  # and add the checked out path to Gemfile.local
-  echo "gem '${PLUGIN}', path: '${VENDOR_DIR}'" > "${DUMMY_APP}/Gemfile.local"
 fi
 
 
