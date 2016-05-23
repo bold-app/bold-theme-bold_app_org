@@ -37,5 +37,5 @@ ln -sf $PWD $VENDOR_DIR
 cd $DUMMY_APP
 bundle install
 #psql -c "SELECT pg_terminate_backend(pg_stat_activity.pid) FROM pg_stat_activity WHERE datname = 'travis_ci_test' AND pg_stat_activity.pid <> pg_backend_pid();" -U postgres
-bundle exec rake bold:plugin:test
+bundle exec rake bold:plugin:travis
 
